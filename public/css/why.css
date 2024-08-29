@@ -1,0 +1,77 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.why-choose-us {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    color: white; /* White text color for content */
+    overflow: hidden;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.why-choose-us h3 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    width: 45%;
+    margin-bottom: 40px;
+    text-align: left;
+    color: white; /* White text color for feature content */
+}
+
+.feature i {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ff00cc; /* Icon color, adjust as needed */
+}
+
+.feature h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #003366, #006699); /* Dark blue gradient */
+}
+
+.dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    opacity: 0.8;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}

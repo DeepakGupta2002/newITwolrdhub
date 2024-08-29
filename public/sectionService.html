@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <!-- Other CSS links -->
+    <script src="https://kit.fontawesome.com/6122ce6209.js" crossorigin="anonymous"></script>
+    <style>
+        .form-container {
+            display: flex;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 800px;
+            max-width: 100%;
+            max-height: 90vh;
+            /* Adjusted for better fit */
+        }
+
+        .form-left {
+            flex: 1;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow-y: auto;
+            /* Added to handle overflow */
+        }
+
+        .form-left h1,
+        .form-left h2 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        .form-left p {
+            margin: 20px 0;
+        }
+
+        .form-left img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .additional-content {
+            margin-top: 20px;
+        }
+
+        .additional-content h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .additional-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .additional-content li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .additional-content img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .benefits {
+            margin-top: 20px;
+        }
+
+        .benefits h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .benefits img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .testimonials {
+            margin-top: 20px;
+        }
+
+        .testimonial {
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-right {
+            flex: 1;
+            padding: 20px;
+            background-color: #007bff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto;
+            /* Added to handle overflow */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input,
+        select,
+        textarea {
+            background-color: white;
+            color: #333;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004494;
+        }
+
+        .form-container {
+            display: none;
+            /* Initially hide the form */
+            /* Add your form container styles here */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing HTML structure -->
+    <nav>
+        <!-- Navigation content -->
+        <ul>
+            <li class="dropdown">
+                <a href="#">Online Marketing</a>
+                <div class="dropdown-content">
+                    <a href="#" class="show-modal">SEO Services</a>
+                    <a href="#" class="show-modal">Search Engine Marketing</a>
+                    <a href="#" class="show-modal">Social Media Marketing</a>
+                    <a href="#" class="show-modal">Pay Per Click Management</a>
+                    <a href="#" class="show-modal">SEO Copywriting</a>
+                    <a href="#" class="show-modal">Digital Marketing</a>
+                    <a href="#" class="show-modal">Lead Management System</a>
+                </div>
+            </li>
+            <!-- Other dropdowns -->
+        </ul>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceModalLabel">Welcome to Our Services</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-container">
+                        <div class="form-left">
+                            <h2>Your Trusted Tech Partner</h2>
+                            <p>Join hands with us to experience unparalleled tech services that cater to all your needs.
+                            </p>
+                            <img src="image/formimage.webp" alt="Tech Experts" class="img-fluid">
+                            <div class="benefits">
+                                <h3>Why Choose Us?</h3>
+                                <ul>
+                                    <li><img src="icons/quality.png" alt="Quality Service"> High-Quality Services</li>
+                                    <li><img src="icons/expertise.png" alt="Expertise"> Industry Expertise</li>
+                                    <li><img src="icons/support.png" alt="Support"> 24/7 Customer Support</li>
+                                    <li><img src="icons/innovation.png" alt="Innovation"> Innovative Solutions</li>
+                                    <li><img src="icons/affordable.png" alt="Affordable"> Affordable Pricing</li>
+                                </ul>
+                            </div>
+                            <div class="testimonials">
+                                <h3>What Our Clients Say:</h3>
+                                <div class="testimonial">"Amazing service and support. Highly recommend!" - John D.
+                                </div>
+                                <div class="testimonial">"Professional and efficient. Our go-to tech experts!" - Sarah
+                                    P.</div>
+                            </div>
+                            <a href="#contactForm" class="cta-button">Get In Touch</a>
+                        </div>
+                        <div class="form-right">
+                            <form id="contactForm">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required
+                                    class="form-control mb-2">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required
+                                    class="form-control mb-2">
+                                <input type="tel" id="mobile" name="mobile" placeholder="Your Mobile" required
+                                    class="form-control mb-2">
+                                <select id="service" name="service" required class="form-control mb-2">
+                                    <option value="" disabled selected>Select A Service</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="app-development">App Development</option>
+                                    <option value="seo">SEO</option>
+                                </select>
+                                <textarea id="message" name="message" placeholder="Message" required
+                                    class="form-control mb-2"></textarea>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your existing scripts -->
+    <script>
+        document.querySelectorAll('.show-modal').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                $('#serviceModal').modal('show');
+            });
+        });
+    </script>
+    <script src="js/testimonial.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+
+</html>

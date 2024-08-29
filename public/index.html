@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ITworldhub.com - Web Development, App Development, SEO Services, and Logo Design Company. Providing high-quality digital solutions for your business.">
+    <meta name="keywords"
+        content="ITworldhub, Web Development, App Development, SEO Services, Logo Design, Digital Solutions">
+    <meta name="author" content="ITworldhub.com">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="ITworldhub.com - Web & App Development, SEO, Logo Design">
+    <meta property="og:description"
+        content="Explore top-notch web development, app development, SEO, and logo design services at ITworldhub.com. We bring your ideas to life with innovative digital solutions.">
+    <meta property="og:image" content="https://www.itworldhub.com/logo.png">
+    <meta property="og:url" content="https://www.itworldhub.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ITworldhub.com - Web & App Development, SEO, Logo Design">
+    <meta name="twitter:description"
+        content="Your go-to company for web development, app development, SEO, and logo design services.">
+    <meta name="twitter:image" content="https://www.itworldhub.com/logo.png">
+    <meta name="twitter:url" content="https://www.itworldhub.com">
+
+    <!-- Social Media Profile Links Meta Tags with type -->
+    <!-- Facebook Meta Tag -->
+    <link rel="me" href="https://www.facebook.com/your-facebook-profile" type="text/html">
+
+    <!-- Twitter Meta Tag -->
+    <link rel="me" href="https://twitter.com/your-twitter-profile" type="text/html">
+
+    <!-- LinkedIn Meta Tag -->
+    <link rel="me" href="https://www.linkedin.com/in/your-linkedin-profile" type="text/html">
+
+    <!-- Instagram Meta Tag -->
+    <link rel="me" href="https://www.instagram.com/your-instagram-profile" type="text/html">
+
+    <!-- YouTube Meta Tag -->
+    <link rel="me" href="https://www.youtube.com/c/your-youtube-channel" type="text/html">
+
+    <!-- Social Media Profile Links Meta Tags without type -->
+    <!-- Facebook Meta Tag -->
+    <link rel="me" href="https://www.facebook.com/your-facebook-profile">
+
+    <!-- Twitter Meta Tag -->
+    <link rel="me" href="https://twitter.com/your-twitter-profile">
+
+    <!-- LinkedIn Meta Tag -->
+    <link rel="me" href="https://www.linkedin.com/in/your-linkedin-profile">
+
+    <!-- Instagram Meta Tag -->
+    <link rel="me" href="https://www.instagram.com/your-instagram-profile">
+
+    <!-- YouTube Meta Tag -->
+    <link rel="me" href="https://www.youtube.com/c/your-youtube-channel">
+
+    <title>ITworldhub</title>
+    <link rel="stylesheet" href="css/why.css">
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/aboutas.css">
+    <link rel="stylesheet" href="css/Service.css">
+    <link rel="stylesheet" href="css/testimonial.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/mediaLink.css">
+    <link rel="stylesheet" href="css/technology.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6122ce6209.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Slide styling */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            /* background-color: rgba(255, 255, 255, 0.5); */
+        }
+
+        .slide-content h1,
+        .slide-content h2,
+        .slide-content p {
+            margin: 10px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+            size: auto;
+        }
+
+        /* Navigation arrows */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation .prev,
+        .navigation .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            user-select: none;
+        }
+
+        .navigation .prev:hover,
+        .navigation .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .slide-content {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .slide-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .slide-content h2 {
+                font-size: 1.2rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+            }
+
+            .buttons button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .navigation .prev,
+            .navigation .next {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide-content h1 {
+                font-size: 1.2rem;
+            }
+
+            .slide-content h2 {
+                font-size: 1rem;
+            }
+
+            .slide-content p {
+                font-size: 0.9rem;
+            }
+
+            .buttons button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .navigation .prev,
+            .navigation .next {
+                padding: 6px;
+            }
+        }
+
+
+        /* modal css */
+        .modal-header {
+            background-color: #5a67d8;
+            color: #fff;
+            border-bottom: 0;
+        }
+
+        .modal-header .modal-title {
+            font-weight: bold;
+        }
+
+        .modal-header .btn-close {
+            filter: brightness(0) invert(1);
+        }
+
+        .modal-body {
+            display: flex;
+            padding: 20px;
+        }
+
+        .form-left {
+            flex: 1;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-left h3 {
+            color: #4a5568;
+            font-weight: bold;
+        }
+
+        .form-left p {
+            color: #718096;
+        }
+
+        .form-left img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .form-right {
+            flex: 1;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 20px;
+            padding: 10px 15px;
+            border: 1px solid #cbd5e0;
+        }
+
+        .btn-primary {
+            background-color: #4a67d8;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 30px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #434190;
+        }
+
+        .modal-footer {
+            border-top: 0;
+        }
+
+        /* coloring  */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#hello">About Us</a></li>
+                <li><a href="#servi">Service</a></li>
+                <li class="dropdown">
+                    <a href="#">Online Marketing</a>
+                    <div class="dropdown-content">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">SEO Services</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Search Engine Marketing</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Social Media Marketing</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Pay Per Click Management</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">SEO Copywriting</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Digital Marketing</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Lead Management System</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Web Design & Development</a>
+                    <div class="dropdown-content">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Website Design</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Website Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">CRM Software Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Software Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Educational Web Portal
+                            Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Restaurant Web Portal
+                            Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Health Care Portal
+                            Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Travel Portal Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Real Estate Portal
+                            Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">E-Commerce Website
+                            Development</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Mobile Application</a>
+                    <div class="dropdown-content">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Mobile App Development</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Windows App Development</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Creative Design</a>
+                    <div class="dropdown-content">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">UI/UX Design</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Brandmark Creation
+                        </a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Brochure Design</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Social Media Links -->
+    <div class="social-icons">
+        <a class="facebookLink" href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+        <a class="twitterLink" href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+
+        <a class="linkedinLink" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
+        <a class="instagramLink" href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+
+        <!-- WhatsApp icon -->
+        <a class="whatsappLink" href="#" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+        <!-- Phone call icon -->
+        <a href="#" class="phone-icon" title="Contact Us">
+            <i class="fa fa-phone"></i>
+        </a>
+    </div>
+
+
+
+    <section>
+        <div class="slider">
+            <div class="slide active" id="slide1">
+                <img src="https://res.cloudinary.com/dlga3sd7j/image/upload/v1724477823/slides/wl8wmyi6ek5sa4wpuxgv.jpg"
+                    alt="Slide 1">
+                <div class="content">
+                    <h2>INNOVATIVE SOLUTIONS</h2>
+                    <h3>Leading Tech Innovator</h3>
+                    <p>Delivering Excellence in Web & App Development</p>
+                    <button>Get Started</button>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <img src="https://res.cloudinary.com/dlga3sd7j/image/upload/v1724478063/slides/ecqzzyib8jvhrpxbehur.jpg"
+                    alt="Slide 2">
+                <div class="content">
+                    <h2>CREATIVE DESIGNS</h2>
+                    <h3>Unleashing Creativity</h3>
+                    <p>Bringing Ideas to Life with Stunning Visuals</p>
+                    <button>Get Started</button>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="slide" id="slide3">
+                <img src="https://res.cloudinary.com/dlga3sd7j/image/upload/v1724477823/slides/wl8wmyi6ek5sa4wpuxgv.jpg"
+                    alt="Slide 3">
+                <div class="content">
+                    <h2>TECHNOLOGY LEADER</h2>
+                    <h3>Empowering Innovation</h3>
+                    <p>Pioneering the Future with Cutting-Edge Technologies</p>
+                    <button>Get Started</button>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+            <div class="navigation-dots" id="navigationDots"></div>
+        </div>
+    </section>
+
+    <!-- <div class="slider-container">
+        <div class="slider" id="slider">
+            Slides will be injected here dynamically
+        </div>
+        <div class="navigation">
+            <span class="prev"><i class="fas fa-chevron-left"></i></span>
+            <span class="next"><i class="fas fa-chevron-right"></i></span>
+        </div>
+    </div>
+ -->
+
+
+    <!-- about as section start now -->
+    <div class="about-section" id="hello">
+        <h2>About Us</h2>
+        <p>Welcome to ITWorldhub.com, your number one source for web and app development. We're dedicated to providing
+            you
+            the very best of digital solutions, with an emphasis on innovation, quality, and customer satisfaction.</p>
+        <!-- <img src="" alt="About Us Image" class="about-image" -->
+        <!-- width="600"> -->
+        <div class="about-container">
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>Our mission is to empower businesses by creating top-notch web and app solutions that enhance their
+                    digital presence and streamline their operations.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Vision</h3>
+                <p>We envision a world where every business, regardless of its size, has access to affordable and
+                    high-quality digital solutions that drive success and growth.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Values</h3>
+                <p>We believe in integrity, innovation, and excellence. These values guide our work and ensure we
+                    deliver the best possible results for our clients.</p>
+            </div>
+        </div>
+        <h2>Meet Our Team</h2>
+        <div class="team" id="teamContainer">
+            <!-- Team members will be dynamically added here -->
+        </div>
+    </div>
+
+    <div class="services-section" id="servi">
+        <h2>Our Services</h2>
+        <p>We are a One-Stop Solution for delivering the best web design and development services. We render customized
+            and affordable web design facilities to suit your requirements. Choose the best plans for building a
+            responsive web design according to your needs.</p>
+        <div class="services-container">
+            <div class="service-card">
+                <img src="image/webdesign.png" alt="Web Design">
+                <h3>Web Design</h3>
+                <p>Creating visually appealing and user-friendly websites.</p>
+            </div>
+            <div class="service-card right">
+                <img src="image/webdevelpoment.png" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Developing robust and scalable web applications.</p>
+            </div>
+            <div class="service-card">
+                <img src="image/ux-interface.png" alt="UI/UX Design">
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and engaging user interfaces and experiences.</p>
+            </div>
+            <div class="service-card right">
+                <img src="image/mobile-apps.png" alt="App Development">
+                <h3>App Development</h3>
+                <p>Developing Android and iOS applications to meet your needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="image/shopping.png" alt="E-commerce Development">
+                <h3>E-commerce Application Development</h3>
+                <p>Building scalable and secure e-commerce platforms.</p>
+            </div>
+            <div class="service-card right">
+                <img src="image/coding.png" alt="Fullstack Development">
+                <h3>Fullstack Development</h3>
+                <p>Building complete web applications from frontend to backend.</p>
+            </div>
+            <div class="service-card">
+                <img src="image/leadership.png" alt="CRM Development">
+                <h3>CRM Development</h3>
+                <p>Developing custom CRM solutions for your business needs.</p>
+            </div>
+            <div class="service-card right">
+                <img src="image/program.png" alt="Autocad Development">
+                <h3>Autocad Development</h3>
+                <p>Creating precise and professional AutoCAD designs.</p>
+            </div>
+            <div class="service-card">
+                <img src="image/game-developer.png" alt="Game Development">
+                <h3>Game Development</h3>
+                <p>Developing immersive and engaging games for all platforms.</p>
+            </div>
+            <div class="service-card right">
+                <img src="image/logo-design.png" alt="Logo Designs">
+                <h3>Brandmark Creation
+                </h3>
+                <p>Creating unique and memorable logos.</p>
+            </div>
+            <div class="service-card">
+                <img src="image/exam.png" alt="Content Writing">
+                <h3>Content Writing</h3>
+                <p>Providing high-quality and engaging content.</p>
+            </div>
+            <div class="service-card right">
+                <img src="image/responsive-web-design-agency-services-250x250.webp" alt="100% Responsive websites">
+                <h3>100% Responsive Websites</h3>
+                <p>Ensuring websites work on all devices.</p>
+            </div>
+            <div class="service-card">
+                <img src="image/customer-service.png" alt="24*7 Free Support">
+                <h3>24*7 Free Support</h3>
+                <p>(Phone/Chat/Email)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- we have techonologys -->
+    <div class="technologies-section">
+        <h2>Our Technologies</h2>
+        <div class="tech-icons">
+            <div class="tech-item java">
+                <i class="fab fa-java" style="color: #007396;"></i>
+                <p>Java</p>
+            </div>
+            <div class="tech-item javascript">
+                <i class="fab fa-js" style="color: #f7df1e;"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="tech-item vue">
+                <i class="fab fa-vuejs" style="color: #42b883;"></i>
+                <p>Vue.js</p>
+            </div>
+            <div class="tech-item angular">
+                <i class="fab fa-angular" style="color: #dd0031;"></i>
+                <p>Angular</p>
+            </div>
+            <div class="tech-item react">
+                <i class="fab fa-react" style="color: #61dafb;"></i>
+                <p>React</p>
+            </div>
+            <div class="tech-item node">
+                <i class="fab fa-node" style="color: #68a063;"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="tech-item html">
+                <i class="fab fa-html5" style="color: #e34c26;"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="tech-item css">
+                <i class="fab fa-css3-alt" style="color: #1572b6;"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="tech-item php">
+                <i class="fab fa-php" style="color: #787cb5;"></i>
+                <p>PHP</p>
+            </div>
+            <div class="tech-item swift">
+                <i class="fab fa-swift" style="color: #fa7343;"></i>
+                <p>Swift</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- why choose us  -->
+    <div class="why-choose-us">
+        <div class="background"></div>
+        <h2>WHY PARTNER WITH US</h2>
+        <h3>We Empower Your Business to Thrive in the Digital Age</h3>
+
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-award"></i>
+                <h4>Unmatched Expertise</h4>
+                <p>We bring decades of experience to the table, ensuring your business leverages cutting-edge technology
+                    and strategies for unprecedented growth.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lightbulb"></i>
+                <h4>Innovative Solutions</h4>
+                <p>Our award-winning solutions are designed to solve the toughest challenges, driving your business
+                    forward with creativity and precision.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-users"></i>
+                <h4>Dedicated Professionals</h4>
+                <p>Our team of experts is not just skilled, but passionate about delivering results that matter. With
+                    diverse expertise, we ensure every project exceeds expectations.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h4>24/7 Client Support</h4>
+                <p>We're here for you, whenever you need us. Our support team is available around the clock to make sure
+                    your operations are seamless and efficient.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            let dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.style.left = e.pageX + 'px';
+            dot.style.top = e.pageY + 'px';
+            document.body.appendChild(dot);
+
+            setTimeout(() => {
+                dot.style.transform = 'scale(1.5)';
+                dot.style.opacity = '0';
+            }, 100);
+
+            setTimeout(() => {
+                dot.remove();
+            }, 500);
+        });
+    </script>
+
+    <div class="testimonial-section">
+        <h2>Testimonials</h2>
+        <div class="testimonial-slider" id="testimonial-slider">
+            <!-- Dynamic testimonial slides will be inserted here -->
+        </div>
+        <div class="slider-navigation">
+            <span class="prev"><i class="fas fa-chevron-left"></i></span>
+            <span class="next"><i class="fas fa-chevron-right"></i></span>
+        </div>
+    </div>
+    <!-- testimonial  -->
+
+    <div class="contact-section" id="caontact">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to
+            reach out to us.</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    &nbsp;
+                    &nbsp;
+                    <span class="phonevalue"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    &nbsp;
+                    &nbsp;
+                    <span class="emialvalue"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    &nbsp;
+                    &nbsp;
+                    <span class="addrshvalue"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    &nbsp;
+                    &nbsp;
+                    <p>working on remote area</p>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="customContactForm">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        <input type="number" name="phone" id="phone" placeholder="Phone" required>
+                        <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="map-container">
+                    <h3>Find Us Here</h3>
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.847072732974!2d90.37873441498283!3d23.75079838458853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7af93bbf7ed%3A0x97a79381205b24b5!2sTech%20City!5e0!3m2!1sen!2sbd!4v1620678380227!5m2!1sen!2sbd"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal HTML -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Success</h5>
+                </div>
+                <div class="modal-body">
+                    Your query has been submitted successfully!
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="js/contact.js"></script> -->
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="image/logo.png" alt="ITWorldhub Logo">
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p id="address">Address: <span class="addrshvalue1"></span></p>
+                <p id="email">Email: <span class="emialvalue1"></span></p>
+                <p id="phone">Phone: <span class="phonevalue1"></span></p>
+            </div>
+            <div class="social-links">
+                <a id="facebookLink1" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a id="twitterLink1" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+
+                <a id="instagramLink1" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a id="linkedinLink1" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="links">
+                <!-- <a href="#">Privacy Policy</a> -->
+                <a href="termscondition.html">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="services">
+            <div class="service-item">
+                <h4>Web Development</h4>
+                <p>Building responsive and functional websites tailored to your needs.</p>
+            </div>
+            <div class="service-item">
+                <h4>App Development</h4>
+                <p>Creating intuitive and engaging mobile applications for all platforms.</p>
+            </div>
+            <div class="service-item">
+                <h4>SEO Development</h4>
+                <p>Optimizing your site to rank higher and attract more organic traffic.</p>
+            </div>
+            <div class="service-item">
+                <h4>CRM Development</h4>
+                <p>Custom CRM solutions to streamline your customer relationship management.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ITWorldhub. All rights reserved.</p>
+            <p>Developed and Designed by Deepak Gupta</p>
+        </div>
+    </footer>
+
+
+    <!-- dynamic data show  -->
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Get in Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-left">
+                        <h3 class="text-primary">CONNECT WITH OUR TEAM</h3>
+                        <p>Fill out this form, and one of our professionals will reach out to you shortly.</p>
+                        <img src="image/getintu.avif" alt="Team Collaboration">
+                    </div>
+                    <div class="form-right">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="modalname" placeholder="Your Full Name"
+                                    required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="modalemail"
+                                    placeholder="Your Email Address" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" id="modalphone" placeholder="Your Phone Number"
+                                    required>
+                                <div class="invalid-feedback">Please enter your phone number.</div>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select" id="service" required>
+                                    <option selected disabled>Select a Service</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="app-development">App Development</option>
+                                    <option value="graphic-design">Graphic Design</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a service.</div>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <textarea class="form-control" placeholder="Your Message" required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div> -->
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Success Modal HTML -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Success</h5>
+                </div>
+                <div class="modal-body">
+                    Your query has been submitted successfully!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+                contactModal.show();
+            }, 0.1); // 60000 milliseconds = 1 minute
+        });
+    </script>
+
+    <!-- Add JavaScript for form validation -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                card.classList.add('visible');
+            });
+        });
+
+    </script>
+    <!-- Add CSS for smooth transitions and validation feedback -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+    </script> -->
+    <script src="js/service.js"></script>
+    <script src="js/contactphysial.js"></script>
+    <script src="js/fetchSociallink.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/modalConatc.js"></script>
+    <script src="js/ourteam.js"></script>
+    <script src="js/testimonial.js"></script>
+    <!-- nav down slider -->
+    <script src="js/slider.js"></script>
+
+    <!-- <script src="js/contact.js"></script> -->
+
+
+
+</body>
+
+</html>

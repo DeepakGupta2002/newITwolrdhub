@@ -1,0 +1,53 @@
+/* Sticky Social Media Icons */
+.social-icons {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    /* background-color: #efeaea; */
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    z-index: 1000;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    background-color: rgba(7, 6, 6, 0.5); /* Default background transparency */
+}
+
+/* Individual colors for each icon */
+.social-icons a[href*="facebook"] {
+    background-color: rgba(59, 89, 152, 0.7); /* Facebook blue with transparency */
+}
+
+.social-icons a[href*="twitter"] {
+    background-color: rgba(29, 161, 242, 0.7); /* Twitter blue with transparency */
+}
+
+.social-icons a[href*="linkedin"] {
+    background-color: rgba(40, 103, 178, 0.7); /* LinkedIn blue with transparency */
+}
+
+.social-icons a[href*="instagram"] {
+    background-color: rgba(193, 53, 132, 0.7); /* Instagram pink/purple with transparency */
+}
+
+.social-icons a[href*="tel"] {
+    background-color: rgba(34, 177, 76, 0.7); /* Green for phone contact with transparency */
+}
+
+.social-icons a:hover {
+    background-color: rgba(0, 123, 255, 0.7); /* Hover state (optional) */
+}
+
+.social-icons a .fab, .social-icons a .fas {
+    font-size: 20px;
+}

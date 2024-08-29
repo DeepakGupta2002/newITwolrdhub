@@ -1,0 +1,18 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Remove .css extension
+RewriteCond %{REQUEST_FILENAME}.css -f
+RewriteRule ^(.*)$ $1.css [L]
+
+# Remove .js extension
+RewriteCond %{REQUEST_FILENAME}.js -f
+RewriteRule ^(.*)$ $1.js [L]
+
+# Redirect to remove the extension in the URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.(html|css|js)\sHTTP [NC]
+RewriteRule ^ %1 [R=301,L]

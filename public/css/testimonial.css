@@ -1,0 +1,145 @@
+
+.testimonial-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f4f4f4, #e9e9e9);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-slide {
+    display: none;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-slide img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-slide h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.testimonial-slide p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.testimonial-slide .rating {
+    color: #f39c12;
+}
+
+.testimonial-slide .quote {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.slider-navigation {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-navigation span {
+    cursor: pointer;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.client-logos img {
+    border-radius: 5rem;
+    width: 100px;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.client-logos img:hover {
+    opacity: 1;
+}
+
+.testimonial-form {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-form h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.testimonial-form input,
+.testimonial-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.testimonial-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.testimonial-form button:hover {
+    background-color: #555;
+}
+
+.testimonial-slide {
+    display: none;
+}
+
+.testimonial-slide.active {
+    display: block;
+}

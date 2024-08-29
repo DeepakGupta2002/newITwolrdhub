@@ -1,0 +1,99 @@
+/* Technologies Section Styling */
+.technologies-section {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #ffffff;
+}
+
+.technologies-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    perspective: 1000px; /* Adds depth for 3D effects */
+}
+
+.tech-item {
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    border-radius: 12px;
+    padding: 20px;
+    width: 140px;
+    height: 160px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d; /* Enables 3D transformations */
+}
+
+.tech-item:hover {
+    transform: rotateY(20deg) rotateX(10deg) translateY(-15px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #ff416c, #ff4b2b);
+}
+
+.tech-item i {
+    font-size: 48px;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease, color 0.4s ease;
+    transform: translateZ(30px); /* Moves the icon forward in 3D space */
+    color: #ff4b2b;
+}
+
+.tech-item:hover i {
+    transform: translateZ(50px) scale(1.2);
+    color: #ffffff;
+}
+
+.tech-item p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    transform: translateZ(20px); /* Moves the text forward in 3D space */
+    transition: transform 0.4s ease;
+}
+
+.tech-item:hover p {
+    transform: translateZ(30px);
+    color: #ffffff;
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tech-item:hover::before {
+    opacity: 1;
+}
+
+/* Adding a reflection effect for more depth */
+.tech-item::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    filter: blur(8px);
+    transform: rotateX(90deg);
+    opacity: 0.5;
+}
