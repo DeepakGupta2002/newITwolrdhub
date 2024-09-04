@@ -2,13 +2,30 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { QueryUser } = require('../modal/queryUser');
 const queryUser = express.Router();
+const { check, validationResult } = require('express-validator');
+const { authenticateToken } = require('../midilwhere/auth');
+const nodemailer = require('nodemailer');
+require('dotenv').config(); // Load environment variables
+
 // Middleware to parse JSON bodies
 queryUser.use(express.json());
 
-// Route to handle POST requests for user queries
-const { check, validationResult } = require('express-validator');
-const { authenticateToken } = require('../midilwhere/auth');
+// Create a nodemailer transporter
+const transporter = nodemailer.createTransport({
+    service: 'Gmail', // Use Gmail's SMTP service
+    secure: true,
+    port:
+        465,
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    },
+    tls: {
+        rejectUnauthorized: false // For some email services to work correctly
+    }
+});
 
+// Route to handle POST requests for user queries
 queryUser.post('/queries',
     [
         check('name').notEmpty().withMessage('Name is required'),
@@ -24,19 +41,46 @@ queryUser.post('/queries',
         const { name, email, phone, query } = req.body;
 
         try {
+            // Save the query to the database
             const newQuery = new QueryUser({ name, email, phone, query });
             await newQuery.save();
-            res.status(201).json({ message: 'Query saved successfully', query: newQuery });
+
+            // Prepare email options for the user
+            const userMailOptions = {
+                from: process.env.EMAIL_USER,
+                to: email, // Send to the user's email
+                subject: 'Your Query has been Received',
+                text: `Hello ${name},\n\nThank you for reaching out to us. We have received your query. Our team will contact you soon.\n\nBest Regards,\nITworldhub.com`
+            };
+
+            // Send confirmation email to the user
+            await transporter.sendMail(userMailOptions);
+
+            // Prepare email options for yourself (admin)
+            const adminMailOptions = {
+                from: process.env.EMAIL_USER,
+                to: process.env.EMAIL_USER, // Send to your own email
+                subject: 'New Query Received',
+                text: `A new query has been submitted by ${name}.\n\nDetails:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nQuery: ${query}`
+            };
+
+            // Send notification email to yourself
+            await transporter.sendMail(adminMailOptions);
+
+            res.status(201).json({ message: 'Query saved and emails sent successfully', query: newQuery });
         } catch (error) {
             console.error(error);
-            res.status(500).json({ error: 'An error occurred while saving the query' });
+            res.status(500).json({
+                error: 'An error occurred while saving the query or sending emails',
+                details: error.message
+            });
         }
     });
 
 // Route to handle GET requests for retrieving all queries
 queryUser.get('/queries',
-    authenticateToken
-    , async (req, res) => {
+    authenticateToken,
+    async (req, res) => {
         try {
             // Extract and validate query parameters
             const page = parseInt(req.query.page, 10) || 1;
@@ -92,7 +136,6 @@ queryUser.delete('/queries/:id',
             // Respond with success
             res.status(200).json({ message: 'Query deleted successfully', query: deletedQuery });
         } catch (error) {
-            // Handle errors
             console.error(error);
             res.status(500).json({ error: 'An error occurred while deleting the query' });
         }

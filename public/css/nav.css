@@ -14,9 +14,9 @@ body {
 /* Navigation Bar Styling */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background-color: #333;
+    background-color: #627779;
     padding: 10px 20px;
     position: sticky; /* Make the navigation bar sticky */
     top: 0; /* Stick to the top */

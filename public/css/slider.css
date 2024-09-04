@@ -36,6 +36,10 @@ section {
     border-radius: 10px;
 }
 
+.content p{
+    color: #f4d3d3;
+}
+
 button {
     padding: 10px 20px;
     margin: 10px;

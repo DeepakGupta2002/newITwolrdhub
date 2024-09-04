@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "lint": "npx eslint .",
     "start": "node app.js",
     "build": "echo 'No build necessary'",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,15 +16,19 @@
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.4.0",
+    "cluster": "^0.7.7",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-validator": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.2",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.15",
     "vercel": "^37.1.2"
   },
   "devDependencies": {
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0",
     "nodemon": "^3.1.4"
   }
 }

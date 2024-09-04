@@ -8,7 +8,7 @@
     <meta name="description"
         content="ITworldhub.com - Web Development, App Development, SEO Services, and Logo Design Company. Providing high-quality digital solutions for your business.">
     <meta name="keywords"
-        content="ITworldhub, Web Development, App Development, SEO Services, Logo Design, Digital Solutions">
+        content="ITworldhub, Web Development, App Development, SEO Services, Logo Design, Digital Solutions,rewa ITWorldhub">
     <meta name="author" content="ITworldhub.com">
 
     <!-- Open Graph Meta Tags for Social Media -->
@@ -29,7 +29,9 @@
 
     <!-- Social Media Profile Links Meta Tags with type -->
     <!-- Facebook Meta Tag -->
-    <link rel="me" href="https://www.facebook.com/your-facebook-profile" type="text/html">
+    <link rel="me"
+        href="https://www.facebook.com/people/ITworld-Hub/pfbid02V8FZ3Njqcs7wjWGWydEiLonRN8TsyHmweYFj2PHqYmuXzzbqavE3PUhXtZ1MxU8Hl/"
+        type="text/html">
 
     <!-- Twitter Meta Tag -->
     <link rel="me" href="https://twitter.com/your-twitter-profile" type="text/html">
@@ -77,154 +79,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://kit.fontawesome.com/6122ce6209.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1MJP4MJBT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-N1MJP4MJBT');
+    </script>
+
     <style>
-        .slider-container {
-            position: relative;
-            width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        /* Slide styling */
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            position: relative;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            vertical-align: top;
-        }
-
-        .slide-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #fff;
-            padding: 20px;
-            width: 80%;
-            max-width: 800px;
-            /* background-color: rgba(255, 255, 255, 0.5); */
-        }
-
-        .slide-content h1,
-        .slide-content h2,
-        .slide-content p {
-            margin: 10px 0;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .buttons button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .buttons button:hover {
-            background-color: #0056b3;
-            size: auto;
-        }
-
-        /* Navigation arrows */
-        .navigation {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .navigation .prev,
-        .navigation .next {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            user-select: none;
-        }
-
-        .navigation .prev:hover,
-        .navigation .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .slide-content {
-                width: 90%;
-                padding: 15px;
-            }
-
-            .slide-content h1 {
-                font-size: 1.5rem;
-            }
-
-            .slide-content h2 {
-                font-size: 1.2rem;
-            }
-
-            .slide-content p {
-                font-size: 1rem;
-            }
-
-            .buttons button {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-
-            .navigation .prev,
-            .navigation .next {
-                padding: 8px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .slide-content h1 {
-                font-size: 1.2rem;
-            }
-
-            .slide-content h2 {
-                font-size: 1rem;
-            }
-
-            .slide-content p {
-                font-size: 0.9rem;
-            }
-
-            .buttons button {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-
-            .navigation .prev,
-            .navigation .next {
-                padding: 6px;
-            }
-        }
-
-
         /* modal css */
         .modal-header {
             background-color: #5a67d8;
@@ -303,7 +169,7 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="image/logo.png" alt="Logo">
+            <img src="image/logo/DB.png" alt="Logo">
         </div>
         <div class="menu-toggle" onclick="toggleMenu()">
             <div></div>
@@ -314,7 +180,7 @@
             <ul>
                 <li><a href="#hello">About Us</a></li>
                 <li><a href="#servi">Service</a></li>
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a href="#">Online Marketing</a>
                     <div class="dropdown-content">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">SEO Services</a>
@@ -325,7 +191,7 @@
                         <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Digital Marketing</a>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Lead Management System</a>
                     </div>
-                </li>
+                </li> -->
                 <li class="dropdown">
                     <a href="#">Web Design & Development</a>
                     <div class="dropdown-content">
@@ -367,19 +233,24 @@
     </nav>
     <!-- Social Media Links -->
     <div class="social-icons">
-        <a class="facebookLink" href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="facebookLink"
+            href="https://www.facebook.com/people/ITworld-Hub/pfbid02V8FZ3Njqcs7wjWGWydEiLonRN8TsyHmweYFj2PHqYmuXzzbqavE3PUhXtZ1MxU8Hl/"
+            target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
 
-        <a class="twitterLink" href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a class="twitterLink" href="https://x.com/ItWorldHub954" target="_blank" title="Twitter"><i
+                class="fab fa-twitter"></i></a>
 
         <a class="linkedinLink" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
 
-        <a class="instagramLink" href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a class="instagramLink" href="https://www.instagram.com/itworldhub_101/" target="_blank" title="Instagram"><i
+                class="fab fa-instagram"></i></a>
 
         <!-- WhatsApp icon -->
-        <a class="whatsappLink" href="#" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a class="whatsappLink" href="+917389152954" target="_blank" title="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
 
         <!-- Phone call icon -->
-        <a href="#" class="phone-icon" title="Contact Us">
+        <a href="+917610152954" class="phone-icon" title="Contact Us">
             <i class="fa fa-phone"></i>
         </a>
     </div>
@@ -395,8 +266,8 @@
                     <h2>INNOVATIVE SOLUTIONS</h2>
                     <h3>Leading Tech Innovator</h3>
                     <p>Delivering Excellence in Web & App Development</p>
-                    <button>Get Started</button>
-                    <button>Learn More</button>
+                    <button data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</button>
+                    <button data-bs-toggle="modal" data-bs-target="#contactModal">Learn More</button>
                 </div>
             </div>
             <div class="slide" id="slide2">
@@ -406,8 +277,8 @@
                     <h2>CREATIVE DESIGNS</h2>
                     <h3>Unleashing Creativity</h3>
                     <p>Bringing Ideas to Life with Stunning Visuals</p>
-                    <button>Get Started</button>
-                    <button>Learn More</button>
+                    <button data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</button>
+                    <button data-bs-toggle="modal" data-bs-target="#contactModal">Learn More</button>
                 </div>
             </div>
             <div class="slide" id="slide3">
@@ -417,8 +288,8 @@
                     <h2>TECHNOLOGY LEADER</h2>
                     <h3>Empowering Innovation</h3>
                     <p>Pioneering the Future with Cutting-Edge Technologies</p>
-                    <button>Get Started</button>
-                    <button>Learn More</button>
+                    <button data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</button>
+                    <button data-bs-toggle="modal" data-bs-target="#contactModal"> Learn More</button>
                 </div>
             </div>
             <a class="prev" onclick="prevSlide()">&#10094;</a>
@@ -527,11 +398,11 @@
                 </h3>
                 <p>Creating unique and memorable logos.</p>
             </div>
-            <div class="service-card">
+            <!-- <div class="service-card">
                 <img src="image/exam.png" alt="Content Writing">
                 <h3>Content Writing</h3>
                 <p>Providing high-quality and engaging content.</p>
-            </div>
+            </div> -->
             <div class="service-card right">
                 <img src="image/responsive-web-design-agency-services-250x250.webp" alt="100% Responsive websites">
                 <h3>100% Responsive Websites</h3>
@@ -702,9 +573,10 @@
                 </div>
                 <div class="map-container">
                     <h3>Find Us Here</h3>
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.847072732974!2d90.37873441498283!3d23.75079838458853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7af93bbf7ed%3A0x97a79381205b24b5!2sTech%20City!5e0!3m2!1sen!2sbd!4v1620678380227!5m2!1sen!2sbd"
-                        allowfullscreen="" loading="lazy"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29035.24512066705!2d81.28247711548643!3d24.540640700892485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39845a348b85dbbd%3A0xbc368e68a40a6da9!2sRewa%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1725472941677!5m2!1sen!2sin"
+                        width="340" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -759,10 +631,10 @@
                 <h4>App Development</h4>
                 <p>Creating intuitive and engaging mobile applications for all platforms.</p>
             </div>
-            <div class="service-item">
+            <!-- <div class="service-item">
                 <h4>SEO Development</h4>
                 <p>Optimizing your site to rank higher and attract more organic traffic.</p>
-            </div>
+            </div> -->
             <div class="service-item">
                 <h4>CRM Development</h4>
                 <p>Custom CRM solutions to streamline your customer relationship management.</p>
@@ -862,7 +734,7 @@
             setTimeout(function () {
                 var contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
                 contactModal.show();
-            }, 0.1); // 60000 milliseconds = 1 minute
+            }, 0.01); // 60000 milliseconds = 1 minute
         });
     </script>
 
